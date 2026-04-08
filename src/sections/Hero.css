@@ -1,0 +1,138 @@
+/* HERO */
+.hero {
+  width: 100%;
+  padding: 140px 0 80px;
+  background-color: #b2e3ed;
+
+  display: flex;
+  align-items: center;
+
+  padding-top: 100px; 
+}
+
+/* CONTAINER */
+.hero-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 80px;
+  gap: 40px;
+}
+
+/* TEXTO */
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 54px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #2d3a4b;
+}
+
+.hero-text h1 span {
+  display: block;
+  margin-top: 10px;
+  color: #ed71a3;
+  font-family: 'Chewy', cursive;
+}
+
+/* PARÁGRAFO */
+.hero-text p {
+  margin-top: 25px;
+  font-size: 18px;
+  color: #555;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+p + p {
+  margin-top: 10px;
+}
+
+/* BOTÕES */
+.hero-buttons {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn-primary {
+  background-color: #ed71a3;
+  color: #fff;
+
+  padding: 16px 30px;
+  border-radius: 999px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  border: none;
+  cursor: pointer;
+
+  transition: transform 0.2s ease, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* BOTÃO SECUNDÁRIO */
+.btn-secondary {
+  background-color: #fff;
+  color: #ed71a3;
+
+  padding: 16px 30px;
+  border-radius: 999px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  border: 2px solid #ed71a3;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #ed71a3;
+  color: #fff;
+}
+
+/* IMAGEM */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 550px;
+  object-fit: contain;
+}
+
+/* RESPONSIVO */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+}
