@@ -1,12 +1,12 @@
-import React, { useState } from 'react'; // Importamos o useState
+import React, { useState } from 'react'; 
 import './Publicacoes.css';
 
 export default function Publicacoes() {
-  // Estado para controlar se a lista está aberta ou fechada
+
   const [expandido, setExpandido] = useState(false);
 
   const itens = [
-    // --- 2025 ---
+  
     {
       titulo: "GLICOGOTAS APP: Um aplicativo educacional sobre Diabetes Mellitus tipo 1",
       local: "Artigo Científico - Revista Educação & Inovação",
@@ -22,7 +22,7 @@ export default function Publicacoes() {
       local: "18th Int. Conference on Advanced Technologies & Treatments for Diabetes - Amsterdã",
       ano: "2025"
     },
-    // --- ADICIONE OS DEMAIS ITENS AQUI ABAIXO ---
+   
     {
       titulo: "Festival Curicaca mostra como tecnologias podem transformar vidas",
       local: "Entrevista Especial - Portal Metrópoles",
@@ -38,10 +38,10 @@ export default function Publicacoes() {
       local: "XVI CONSOPERJ - Rio de Janeiro",
       ano: "2025"
     },
-    // ... coloque todos os outros que você tem na lista
+    
   ];
 
-  // Lógica: Se não estiver expandido, corta o array para mostrar apenas 3
+
   const itensVisiveis = expandido ? itens : itens.slice(0, 3);
 
   return (
@@ -55,7 +55,6 @@ export default function Publicacoes() {
           </p>
         </header>
 
-        {/* Adicionamos uma classe extra quando expandido para controlar a altura no CSS */}
         <div className={`pub-list ${expandido ? 'is-expanded' : ''}`}>
           {itensVisiveis.map((item, index) => (
             <div key={index} className="pub-item">
@@ -70,7 +69,6 @@ export default function Publicacoes() {
           ))}
         </div>
 
-        {/* O botão agora alterna entre mostrar tudo ou recolher */}
         <button 
           className="pub-btn-all" 
           onClick={() => setExpandido(!expandido)}

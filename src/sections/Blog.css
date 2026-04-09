@@ -33,7 +33,6 @@
     margin: 0 auto;
 }
 
-/* Grid de 3 Colunas para os Cards */
 .blog-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

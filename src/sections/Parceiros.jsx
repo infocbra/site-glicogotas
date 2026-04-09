@@ -1,7 +1,7 @@
 import React from 'react';
 import './Parceiros.css';
 
-// Importação das imagens (ajuste o caminho se necessário)
+// Importação das imagens 
 import logoIFRJ from '../assets/images/ifbrj.png';
 import logoIFB from '../assets/images/ifbdf.png';
 import logoCNPq from '../assets/images/cnpq.png';

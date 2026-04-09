@@ -11,8 +11,6 @@ import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './Equipe.css';
-
-// IMPORTAÇÕES DE IMAGENS
 import fotoTalita from '../assets/images/talita.jpeg';
 import fotoSharon from '../assets/images/sharon.png';
 import fotoThiago from '../assets/images/tiago.png';

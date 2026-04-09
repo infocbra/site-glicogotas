@@ -29,13 +29,13 @@
 }
 
 .logo-item img {
-  max-height: 70px; /* Mantém os logos em uma escala equilibrada */
+  max-height: 70px;
   width: auto;
 }
 
 /* --- ESTILO FOOTER --- */
 .footer {
-  background-color: #4BB0D0; /* Azul do seu print */
+  background-color: #4BB0D0;
   color: white;
   padding: 80px 20px 20px;
 }
@@ -44,7 +44,7 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr; /* Proporção das colunas */
+  grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr; 
   gap: 30px;
 }
 
@@ -91,7 +91,7 @@
 .social-circle {
   width: 35px;
   height: 35px;
-  background-color: rgba(255, 255, 255, 0.3); /* Círculo suave do print */
+  background-color: rgba(255, 255, 255, 0.3); 
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -116,7 +116,7 @@
 }
 
 .newsletter-group button {
-  background-color: #ff66a3; /* Rosa vibrante do seu botão */
+  background-color: #ff66a3; 
   color: white;
   border: none;
   padding: 0 25px;

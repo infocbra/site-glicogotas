@@ -1,6 +1,6 @@
 /* --- ESTILO BASE --- */
 .footer-section {
-  background-color: #49a7d1; /* Azul do seu print */
+  background-color: #49a7d1; 
   color: white;
   padding: 80px 20px 30px;
   font-family: 'Arial', sans-serif;
@@ -14,30 +14,28 @@
   gap: 40px;
 }
 
-/* --- LOGO ROSA (G + LICOGOTAS) --- */
 .footer-brand-wrapper {
   display: flex;
-  align-items: baseline; /* Alinha o G com a base do texto */
+  align-items: baseline; 
   gap: 1px;
   margin-bottom: 20px;
 }
 
 .g-professor-svg {
-  width: 26px; /* Tamanho do G */
+  width: 26px;
   height: auto;
-  color: #ff69b4; /* ROSA DO BOTÃO NO "G" */
+  color: #ff69b4; 
   flex-shrink: 0;
-  transform: translateY(5px); /* Ajuste para o G não ficar "voando" */
+  transform: translateY(5px); 
 }
 
 .brand-text-pink {
   font-family: 'Chewy', cursive;
   font-size: 34px;
-  color: #ff69b4; /* ROSA DO BOTÃO NO TEXTO */
+  color: #ff69b4; 
   line-height: 1;
 }
 
-/* --- TEXTOS E LINKS --- */
 .footer-column h4 {
   font-size: 18px;
   font-weight: bold;
@@ -66,7 +64,6 @@
   text-decoration: underline;
 }
 
-/* Redes Sociais (Círculos Translúcidos) */
 .footer-socials {
   display: flex;
   gap: 12px;
@@ -90,7 +87,6 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* --- NEWSLETTER E PLACEHOLDER BRANCO --- */
 .newsletter-wrapper {
   display: flex;
   margin-top: 15px;
@@ -99,28 +95,26 @@
 
 .newsletter-input {
   flex: 1;
-  background-color: transparent !important; /* Transparente para o placeholder branco aparecer */
+  background-color: transparent !important; 
   border: 1px solid white;
   border-radius: 8px 0 0 8px;
   padding: 0 15px;
-  color: white; /* Texto digitado pelo usuário */
+  color: white; 
   outline: none;
 }
 
-/* O SEGREDO: Placeholder em Branco Puro */
 .newsletter-input::placeholder {
   color: white !important;
-  opacity: 1; /* Garante que não fique cinza no Firefox */
+  opacity: 1; 
 }
 
-/* Garantia para Chrome, Safari e Edge */
 .newsletter-input::-webkit-input-placeholder {
   color: white !important;
   opacity: 1;
 }
 
 .newsletter-button {
-  background-color: #ff69b4; /* Rosa Enviar */
+  background-color: #ff69b4;
   color: white;
   border: none;
   padding: 0 20px;
@@ -131,7 +125,7 @@
 }
 
 .newsletter-button:hover {
-  background-color: #e0589b; /* Um rosa levemente mais escuro no hover */
+  background-color: #e0589b; 
 }
 
 /* --- RODAPÉ FINAL --- */
