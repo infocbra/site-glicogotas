@@ -1,139 +1,284 @@
-/* Container Geral */
 .conheca-container {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 8%;
+  background: linear-gradient(135deg, #fff7fb 0%, #f5fcff 100%);
+}
+
+/* Bola decorativa no fundo */
+.shape-bg {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(225, 107, 158, 0.08);
+  border-radius: 50%;
+  top: -150px;
+  right: -120px;
+  z-index: 0;
+}
+
+/* =========================================
+   LAYOUT
+========================================= */
+.conheca-layout {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* =========================================
+   ÁREA TEXTO
+========================================= */
+.area-texto {
+  flex: 1;
+  max-width: 540px;
+}
+
+.titulo-primario {
+  font-family: 'Chewy', cursive;
+  color: #e16b9e;
+  font-size: 3.4rem;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.texto-suave {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+/* =========================================
+   BOTÃO
+========================================= */
+.btn-principal-turma {
+  border: none;
+  background: linear-gradient(135deg, #58b4d1, #72c8e2);
+  color: white;
+  padding: 18px 35px;
+  border-radius: 18px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 12px 30px rgba(88, 180, 209, 0.35);
+}
+
+.btn-principal-turma:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(88, 180, 209, 0.4);
+}
+
+/* =========================================
+   ÁREA IMAGEM
+========================================= */
+.area-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-turma {
+  width: 100%;
+  max-width: 720px;
+  display: block;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.imagem-turma:hover {
+  transform: scale(1.02);
+}
+
+/* =========================================
+   GALERIA
+========================================= */
+.galeria-elegante-container {
+  padding: 60px 8%;
+  animation: fadeIn 0.5s ease;
+}
+
+.galeria-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.titulo-galeria {
+  font-family: 'Chewy', cursive;
+  color: #e16b9e;
+  font-size: 3rem;
+}
+
+.btn-voltar {
+  background: white;
+  border: 2px solid #58b4d1;
+  color: #58b4d1;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background: #58b4d1;
+  color: white;
+}
+
+/* =========================================
+   GRID DOS CARDS
+========================================= */
+.mascotes-agrupados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.card-elegante {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.card-elegante:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+/*
+.card-top {
+  height: 250px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center; 
+  padding: 0; 
+}
+
+.img-centro {
+  height: auto;       
+  max-height: 100%;      
+  width: auto;           
+  margin: auto;          
+  display: block;
+}
+*/
+
+.card-top {
+  height: 200px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  padding: 0;
+}
+
+/* regra geral */
+.card-top img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; 
+  transition: 0.3s ease;
+}
+
+/* regra geral quando for img-centro */
+.card-top img.img-centro {
+  width: auto;      
+  height: auto;      
+  max-width: 80%;    
+  max-height: 80%;   
+  margin: auto;     
+  display: block;
+}
+
+.card-top img.img-lita {
+  width: 50%;   /* ocupa metade da largura */
+  height: auto; /* mantém proporção */
+  max-width: none; /* remove limite de 100% da regra global */
+  max-height: none;
+  margin: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.card-top img:hover {
+  transform: scale(1.05);
+}
+
+.card-info {
+  padding: 22px;
+  text-align: center;
+}
+
+.card-info h3 {
+  font-family: 'Chewy', cursive;
+  color: #333;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.card-info p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+@media (max-width: 980px) {
+  .conheca-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+  .titulo-primario {
+    font-size: 3.5rem;
+  }
+  .imagem-wrapper {
+    margin-top: 30px;
+  }
+  .galeria-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .conheca-container {
+    padding: 70px 6%;
+  }
+  .titulo-primario {
+    font-size: 2.8rem;
+  }
+  .texto-suave {
+    font-size: 1rem;
+  }
+  .btn-principal-turma {
     width: 100%;
-    padding: 100px 20px;
-    background-color: var(--branco);
-    display: flex;
-    justify-content: center;
+  }
 }
 
-.conheca-content {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 80px; 
-}
-
-.conheca-logo-area {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.circle-outer {
-    width: 340px;
-    height: 340px;
-    background-color: var(--branco);
-    border: 15px solid var(--azul-extra-claro); 
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-}
-
-.circle-inner {
-    width: 290px;
-    height: 290px;
-    background-color: var(--rosa-extra-claro); 
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.logo-image-inner {
-    width: 70%; 
-    height: auto;
-    object-fit: contain;
-}
-
-.conheca-text-area {
-    flex: 1.5;
-    text-align: left;
-}
-
-.conheca-title {
-    font-family: 'Chewy', cursive;
-    font-size: 48px;
-    color: var(--azul-principal);
-    margin-bottom: 25px;
-}
-
-.conheca-description {
-    font-family: 'Arial', sans-serif;
-    font-size: 17px;
-    color: #4a5568; 
-    line-height: 1.7;
-    margin-bottom: 20px;
-    
-    text-align: justify;
-    text-justify: inter-word; 
-}
-
-
-.btn-ver-mais {
-    background-color: var(--azul-principal);
-    color: var(--branco);
-    border: none;
-    padding: 15px 45px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn-ver-mais:hover {
-    background-color: #3A9BB9; 
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(75, 176, 208, 0.4);
-}
-
-
-@media (max-width: 900px) {
-    .conheca-container {
-        padding: 60px 20px;
-    }
-
-    .conheca-content {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .conheca-text-area {
-       
-        text-align: center;
-    }
-
-    .conheca-description {
-        text-align: justify;
-        max-width: 600px;
-        margin: 0 auto 20px;
-    }
-    
-    .circle-outer {
-        width: 260px; 
-        height: 260px;
-        border-width: 10px;
-    }
-    
-    .circle-inner {
-        width: 220px;
-        height: 220px;
-    }
-    
-    .conheca-title {
-        font-size: 32px;
-        margin-top: 10px;
-    }
-
-    .btn-ver-mais {
-        width: 100%; 
-        max-width: 300px;
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
