@@ -4,7 +4,7 @@ import './Conheca.css';
 import imagemTurma from '../assets/images/imagemturma.png';
 
 import litaImg from '../assets/images/lita.png';
-import reidahipoImg from '../assets/images/reidahipo.png';
+import reidahipor from '../assets/images/reidahiper.svg';
 import bobodahipoImg from '../assets/images/bobodahipo.png';
 import feImg from '../assets/images/fe.png';
 import insulinsImg from '../assets/images/insulins.png';
@@ -13,93 +13,95 @@ import betinhoImg from '../assets/images/betinho.png';
 import canettoImg from '../assets/images/canetto.png';
 
 export default function Conheca() {
-
   const [exibirGaleria, setExibirGaleria] = useState(false);
 
-  const turmaGlicogotas = [
+const turmaGlicogotas = [
     {
       nome: 'Lita',
       imagem: litaImg,
-      cor: '#FFD1DC',
+      cor: '#FFB8C6',
       desc: 'A estrela que guia com carinho.',
-      classe: 'img-lita'
+      classe: 'zoom-lita'
     },
     {
       nome: 'Rei da Hiper',
-      imagem: reidahipoImg,
-      cor: '#FFB7B2',
+      imagem: reidahipor,
+      cor: '#FF9E99',
       desc: 'Ensina sobre o açúcar alto.',
-      classe: 'img-pequeno'
+      classe: 'zoom-reidahiper'
     },
     {
       nome: 'Bobo da Hipo',
       imagem: bobodahipoImg,
-      cor: '#B2CEFE',
+      cor: '#9EC2FF',
       desc: 'Atenção quando a energia baixa!',
-      classe: 'img-pequeno'
+      classe: 'zoom-bobodahipo'
     },
     {
       nome: 'Fê',
       imagem: feImg,
-      cor: '#FAFAD2',
+      cor: '#F9E99B',
       desc: 'Coragem e inteligência no dia a dia.',
-      classe: 'img-medio'
+      classe: 'zoom-fe'
     },
     {
       nome: 'Insulins',
       imagem: insulinsImg,
-      cor: '#C1FFC1',
+      cor: '#A8F2A8',
       desc: 'Gotas mágicas de superpoderes.',
-      classe: 'img-centro'
+      classe: 'zoom-insulins'
     },
     {
       nome: 'Pumps',
       imagem: pumpsImg,
-      cor: '#E0BBE4',
+      cor: '#D6A2E8',
       desc: 'Tecnologia em prol do equilíbrio.',
-      classe: 'img-centro'
+      classe: 'zoom-pumps'
     },
     {
       nome: 'Betinho',
       imagem: betinhoImg,
-      cor: '#FFDFBA',
+      cor: '#FFD39B',
       desc: 'O pâncreas mais amigo de todos.',
-      classe: 'img-centro'
+      classe: 'zoom-betinho'
     },
     {
       nome: 'Canetto',
       imagem: canettoImg,
-      cor: '#BAE1FF',
+      cor: '#9BD6FF',
       desc: 'Sempre pronto para ajudar!',
-      classe: 'img-centro'
+      classe: 'zoom-canetto'
     }
   ];
 
   if (exibirGaleria) {
     return (
-      <section className="galeria-elegante-container">
+      <section className="galeria-cracha-container">
         <div className="galeria-header">
-          <button
-            className="btn-voltar"
-            onClick={() => setExibirGaleria(false)}
-          >
+          <button className="btn-voltar" onClick={() => setExibirGaleria(false)}>
             ← Voltar
           </button>
-          <h2 className="titulo-galeria">Nossa Turma Completa</h2>
+          <div className="header-titulos">
+            <h2 className="titulo-galeria">Nossa Turma Completa</h2>
+            <p className="subtitulo-galeria">Conheça cada um dos nossos mascotes e guardiões</p>
+          </div>
         </div>
 
-        <div className="mascotes-agrupados">
+        {/* GRID MODELO CRACHÁ */}
+        <div className="grid-cracha">
           {turmaGlicogotas.map((m, index) => (
-            <div key={index} className="card-elegante">
-              <div
-                className="card-top"
-                style={{ backgroundColor: m.cor }}
-              >
-                <img
-                  src={m.imagem}
-                  alt={m.nome}
-                  className={m.classe}
-                />
+            <div key={index} className="card-cracha">
+              <div className="cracha-avatar-wrapper">
+                <div
+                  className="cracha-circulo"
+                  style={{ backgroundColor: m.cor }}
+                >
+                  <img
+                    src={m.imagem}
+                    alt={m.nome}
+                    className={`cracha-img ${m.classe}`}
+                  />
+                </div>
               </div>
               <div className="card-info">
                 <h3>{m.nome}</h3>

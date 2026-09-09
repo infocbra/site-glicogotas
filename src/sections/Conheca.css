@@ -1,3 +1,6 @@
+/* =========================================
+   CONTAINER DA SEÇÃO PRINCIPAL (INICIAL)
+========================================= */
 .conheca-container {
   position: relative;
   overflow: hidden;
@@ -18,7 +21,7 @@
 }
 
 /* =========================================
-   LAYOUT
+   LAYOUT INICIAL
 ========================================= */
 .conheca-layout {
   position: relative;
@@ -29,9 +32,6 @@
   gap: 30px;
 }
 
-/* =========================================
-   ÁREA TEXTO
-========================================= */
 .area-texto {
   flex: 1;
   max-width: 540px;
@@ -53,7 +53,7 @@
 }
 
 /* =========================================
-   BOTÃO
+   BOTÃO PRINCIPAL
 ========================================= */
 .btn-principal-turma {
   border: none;
@@ -74,7 +74,7 @@
 }
 
 /* =========================================
-   ÁREA IMAGEM
+   ÁREA VISUAL INICIAL
 ========================================= */
 .area-visual {
   flex: 1;
@@ -103,138 +103,195 @@
 }
 
 /* =========================================
-   GALERIA
+   GALERIA CRACHÁ (CONTAINER & HEADER)
 ========================================= */
-.galeria-elegante-container {
+.galeria-cracha-container {
   padding: 60px 8%;
-  animation: fadeIn 0.5s ease;
+  background: #f8fafc;
+  min-height: 85vh;
+  animation: fadeIn 0.4s ease;
 }
 
 .galeria-header {
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
-}
-
-.titulo-galeria {
-  font-family: 'Chewy', cursive;
-  color: #e16b9e;
-  font-size: 3rem;
+  justify-content: center;
+  margin-bottom: 45px;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-voltar {
+  position: absolute;
+  left: 0;
   background: white;
   border: 2px solid #58b4d1;
   color: #58b4d1;
-  padding: 10px 20px;
+  padding: 9px 20px;
   border-radius: 12px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 0.95rem;
   transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(88, 180, 209, 0.15);
 }
 
 .btn-voltar:hover {
   background: #58b4d1;
   color: white;
+  transform: translateX(-3px);
+}
+
+.header-titulos {
+  text-align: center;
+}
+
+.titulo-galeria {
+  font-family: 'Chewy', cursive;
+  color: #e16b9e;
+  font-size: 3.2rem;
+  margin: 0;
+}
+
+.subtitulo-galeria {
+  color: #777;
+  font-size: 1.05rem;
+  margin-top: 6px;
 }
 
 /* =========================================
-   GRID DOS CARDS
+   GRID DOS CARDS (ESTILO CRACHÁ COMPACTO)
 ========================================= */
-.mascotes-agrupados {
+.grid-cracha {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(4, 210px);
+  justify-content: center;
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
-.card-elegante {
-  background: white;
-  border-radius: 24px;
-  overflow: hidden;
-  transition: 0.35s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+.card-cracha {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 18px 14px 20px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
-.card-elegante:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+.card-cracha:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.09);
 }
-/*
-.card-top {
-  height: 250px; 
+
+/* =========================================
+   MOLDURA CIRCULAR / AVATAR DO CRACHÁ
+========================================= */
+.cracha-avatar-wrapper {
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.cracha-circulo {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-items: center; 
-  padding: 0; 
+  overflow: hidden; /* Corta sobras e mantém o zoom dentro do círculo */
+  border: 4px solid #ffffff;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
-.img-centro {
-  height: auto;       
-  max-height: 100%;      
-  width: auto;           
-  margin: auto;          
-  display: block;
-}
-*/
-
-.card-top {
-  height: 200px; 
-  display: flex;
-  justify-content: center; 
-  align-items: center;     
-  padding: 0;
+.card-cracha:hover .cracha-circulo {
+  transform: scale(1.04);
 }
 
-/* regra geral */
-.card-top img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; 
-  transition: 0.3s ease;
-}
-
-/* regra geral quando for img-centro */
-.card-top img.img-centro {
-  width: auto;      
-  height: auto;      
-  max-width: 80%;    
-  max-height: 80%;   
-  margin: auto;     
-  display: block;
-}
-
-.card-top img.img-lita {
-  width: 50%;   /* ocupa metade da largura */
-  height: auto; /* mantém proporção */
-  max-width: none; /* remove limite de 100% da regra global */
-  max-height: none;
-  margin: auto;
-  display: block;
+.cracha-img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.card-top img:hover {
-  transform: scale(1.05);
+/* =========================================
+   CALIBRAÇÃO DE ZOOM E POSIÇÃO DOS MASCOTES
+========================================= */
+
+/* 1. Lita: diminuída um pouco para respirar dentro do círculo */
+.zoom-lita {
+  transform: scale(0.92) translate(0%, 2%);
 }
 
+/* 2. Rei da Hiper: puxado de volta para a direita e ampliado no centro */
+.zoom-reidahiper {
+  transform: scale(2.7) translate(38%, 0%);
+}
+
+/* 3. Bobo da Hipo: centralizado e subindo para o meio */
+.zoom-bobodahipo {
+  transform: scale(3.8) translate(-40%, 5%);
+}
+
+/* 4. Fê: puxa para a direita e centraliza o conjunto */
+.zoom-fe {
+  transform: scale(1.60) translate(18%, 3%);
+}
+
+/* 5. Insulins: empurra para o centro e amplia */
+.zoom-insulins {
+  transform: scale(2.8) translate(28%, 15%);
+}
+
+/* 6. Pumps: puxa bem da direita para o centro */
+.zoom-pumps {
+  transform: scale(2.8) translate(-25%, -12%);
+}
+
+/* 7. Betinho: empurra da esquerda para o centro e enquadra */
+.zoom-betinho {
+  transform: scale(3.4) translate(15%, 4%);
+}
+
+/* 8. Canetto: centralizado, com mais presença e descendo ligeiramente */
+.zoom-canetto {
+  transform: scale(1.8) translate(-30%, 2%);
+}
+
+/* =========================================
+   TEXTOS DO CARD
+========================================= */
 .card-info {
-  padding: 22px;
-  text-align: center;
+  width: 100%;
 }
 
 .card-info h3 {
   font-family: 'Chewy', cursive;
-  color: #333;
-  font-size: 1.6rem;
-  margin-bottom: 10px;
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin: 0 0 6px 0;
+  letter-spacing: 0.3px;
 }
 
 .card-info p {
-  color: #666;
-  line-height: 1.5;
-  font-size: 0.95rem;
+  color: #718096;
+  line-height: 1.45;
+  font-size: 0.88rem;
+  margin: 0;
+  min-height: 38px;
 }
 
 /* =========================================
@@ -245,30 +302,43 @@
     flex-direction: column;
     text-align: center;
   }
-  .titulo-primario {
-    font-size: 3.5rem;
-  }
-  .imagem-wrapper {
-    margin-top: 30px;
+  .grid-cracha {
+    grid-template-columns: repeat(2, 210px);
+    gap: 20px;
   }
   .galeria-header {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+  }
+  .btn-voltar {
+    position: static;
   }
 }
 
-@media (max-width: 600px) {
-  .conheca-container {
-    padding: 70px 6%;
+@media (max-width: 520px) {
+  .conheca-container,
+  .galeria-cracha-container {
+    padding: 50px 5%;
   }
-  .titulo-primario {
-    font-size: 2.8rem;
+  .grid-cracha {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
-  .texto-suave {
-    font-size: 1rem;
+  .card-cracha {
+    padding: 14px 10px 16px 10px;
   }
-  .btn-principal-turma {
-    width: 100%;
+  .cracha-circulo {
+    width: 120px;
+    height: 120px;
+  }
+  .card-info h3 {
+    font-size: 1.3rem;
+  }
+  .card-info p {
+    font-size: 0.8rem;
+  }
+  .titulo-galeria {
+    font-size: 2.2rem;
   }
 }
 
